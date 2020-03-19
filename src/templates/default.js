@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-class BlogPostTemplate extends React.Component {
+class DefaultTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -37,7 +37,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default DefaultTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
